@@ -8,11 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>TechStore</h1>
+        
         <nav>
-            <a href="#accueil">Accueil</a>
-            <a href="#produits">Produits</a>
-            <a href="#contact">Contact</a>
+            <section id="navigation">
+                <button><a href="#accueil">Accueil</a></button>
+                <button><a href="#produits">Produits</a></button>
+                <button><a href="#contact">Contact</a></button>
+            </section>
+            <section id="store">
+                <a href="#accueil"><h1>TechStore</h1></a>
+            </section>
         </nav>
     </header>
 
@@ -24,6 +29,36 @@
 
         <section id="produits">
             <h2>Nos Produits</h2>
+            <div class="product-grid"> 
+                <div class="product-card">
+                    <img src="https://static.fnac-static.com/multimedia/Images/FD/Comete/173437/CCP_IMG_1200x800/2307552.jpg" alt="Pack Liberté">
+                    <h3>Pack 1</h3>
+                    <p class="price">€499.99</p>
+                    <button type="button" class="button">
+                        <span class="button__text">Ajouter</span>
+                        <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="https://static.fnac-static.com/multimedia/Images/FD/Comete/181047/CCP_IMG_1200x800/2414044.jpg" alt="Produit 2">
+                    <h3>Pack 2</h3>
+                    
+                    <p class="price">€299.99</p>
+                    <button type="button" class="button">
+                        <span class="button__text">Ajouter</span>
+                        <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="https://static.fnac-static.com/multimedia/Images/FD/Comete/163848/CCP_IMG_1200x800/2173386.jpg" alt="Produit 3">
+                    <h3>Pack 3</h3>
+                    <p class="price">€399.99</p>
+                    <button type="button" class="button">
+                        <span class="button__text">Ajouter</span>
+                        <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                    </button>
+                </div>
+                <!-- Ajoutez plus de produits selon les besoins -->
             <!-- À compléter par les étudiants -->
         </section>
     </main>

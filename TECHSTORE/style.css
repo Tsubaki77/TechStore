@@ -1,0 +1,195 @@
+/* Variables CSS pour faciliter les modifications */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #fffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: #333;
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif ;   
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 30px;
+    line-height: px;
+}
+
+#store{
+    margin-right: 45%;
+}
+
+/* From Uiverse.io by biswacpcode */ 
+#navigation button {
+  font-size: 2px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+#navigation button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #efe41a;
+  transition: 0.5s ease;
+}
+
+#navigation button:hover::before {
+  width: 100%;
+}
+/* Styles à personnaliser par chaque étudiant */
+
+main{
+    margin-top: 70px;
+    padding: 20px;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+img{
+    width: 16rem;
+    height: 12rem;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #efe41a;
+  background-color:#efe41a;
+
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #efe41a;;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+.button:hover {
+  background: #efe41a;;
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+  background-color: #2e8644;
+}
+
+.button:active {
+  border: 1px solid #2e8644;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 30rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+#hero{
+  text-align: center;
+  padding: 20px 20px;
+  width:100vw;
+  height: 100vh;
+}
