@@ -1,0 +1,379 @@
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+    font-family: 'Netflix Sans light', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+    background-color: rgb(15, 15, 15);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+section{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar */
+}
+
+
+/* --------------------------------------------- */
+/* Nav Bar */
+nav {
+    position: fixed;
+    width: 100vw;
+    height: 4rem;
+    top: 0;
+    /* From https://css.glass */
+    background: rgba(15, 15, 15, 0.1);
+    box-shadow: 0 4px 30px rgba(1, 0, 0, 0.5);
+    backdrop-filter: blur(1.4px);
+    -webkit-backdrop-filter: blur(1.4px);
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+
+nav a{
+    margin-left: 2rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+  
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 10px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+  
+.hover-underline-animation {
+    position: relative;
+    color: rgba(255, 255, 255, 0.9) ;
+    padding-bottom: 20px;
+}
+  
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FE0202;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+}
+  
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+  
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    margin-right: 1rem;
+    
+}
+
+#sukuna{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+/* --------------------------------------------- */
+
+/* --------------------------------------------- */
+/* HOME PAGE */
+    
+#home-section{
+    padding-top: 3rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(15, 15, 15);
+    flex-direction: column;
+}
+
+center h2{
+    font-size: 30px;
+    line-height: 56px;
+    margin-bottom: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+center{
+    margin-bottom: 6rem;
+    position: relative;  
+}
+
+center img{
+    margin-top: 5rem;
+    width: 50rem;
+    height: 10rem;
+}
+
+.wallpaper{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
+/* --------------------------------------------- */
+
+
+/* --------------------------------------------- */
+/* COMPETENCES PAGE  */
+.skils{
+    width: 10rem;
+    height: 8rem;
+    margin-left: 5rem;
+}
+
+#competence-section{
+    height: 20rem;
+}
+
+/* --------------------------------------------- */
+
+
+/* --------------------------------------------- */
+/* PROJETS PAGE */
+
+.liste_content{
+    width: 70rem;
+}
+
+.liste{
+    display: flex;
+    justify-content: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.col{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+  position: relative;
+  width: 20rem;
+  height: 30rem;
+  background: #ffffff0c;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card span{
+    margin-top: 2rem;
+}
+
+/* Effet coins rouges (invisible par défaut) */
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 0, 0, 0.8); 
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 20px 0 20px;
+}
+
+.card::after {
+  bottom: 0;
+  left: 0;
+}
+
+/* Quand on survole -> le rouge couvre toute la card */
+.card:hover::before,
+.card:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: 25rem;   
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay pour les liens */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 3;
+}
+
+/* Les liens apparaissent quand voile rouge actif */
+.card:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.overlay-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.overlay-links a {
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.8s ease, background 0.3s, color 0.3s;
+}
+
+.overlay-links a:hover {
+  opacity: 1;
+  color: black;
+}
+
+
+
+/* --------------------------------------------- */
+
+
+
+/* Footer */
+
+footer {
+    bottom: 0;
+    width: 100vw;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkgrey;
+    font-size: 1rem;
+    background: rgb(49, 49, 49);
+}
+
+ul {
+    list-style: none;
+}
+  
+.example-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+}
+
+.example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+.example-2 .icon-content a:hover {
+    color: white;
+}
+.example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+    height: 100%;
+}
+  
+.example-2 .icon-content a[data-social="linkedin"] .filled, .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+}
+  
+.example-2 .icon-content a[data-social="github"] .filled, .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+}
+
+  
